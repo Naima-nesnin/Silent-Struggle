@@ -93,7 +93,7 @@ app.post('/api/doubts/upvote', (req, res) => {
   res.json({ success: true });
 });
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Silent Struggle server running on http://localhost:${port}`);
   console.log('Doubts saved in doubts.json');
