@@ -1,0 +1,16 @@
+{
+  "name": "silent-struggle",
+  "version": "1.0.0",
+  "description": "Anonymous doubt sharing app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

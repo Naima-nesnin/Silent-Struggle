@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1771022078153,
+    "text": "value of pi?",
+    "subject": "Maths",
+    "timestamp": "2026-02-13T22:34:38.153Z",
+    "replies": [
+      {
+        "text": "3.14",
+        "timestamp": "2026-02-13T22:34:44.598Z",
+        "upvotes": 0
+      }
+    ]
+  },
+  {
+    "id": 1771022105675,
+    "text": "pointers used for?",
+    "subject": "DSA",
+    "timestamp": "2026-02-13T22:35:05.675Z",
+    "replies": [
+      {
+        "text": "to pass parameters by reference",
+        "timestamp": "2026-02-13T22:35:32.412Z",
+        "upvotes": 1
+      }
+    ]
+  },
+  {
+    "id": 1771022799885,
+    "text": "role of os?",
+    "subject": "OS",
+    "timestamp": "2026-02-13T22:46:39.885Z",
+    "replies": [
+      {
+        "text": "acts as an interface btween users and hardwares.",
+        "timestamp": "2026-02-13T22:47:09.308Z",
+        "upvotes": 0
+      }
+    ]
+  },
+  {
+    "id": 1771023106181,
+    "text": "what is linked list?",
+    "subject": "DSA",
+    "timestamp": "2026-02-13T22:51:46.181Z",
+    "replies": []
+  }
+]

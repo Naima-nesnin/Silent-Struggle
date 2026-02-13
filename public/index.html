@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Silent Struggle – Ask Anything Anonymously</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Silent Struggle</h1>
+    <p class="subtitle">Ask your doubts anonymously. No judgment. No names.</p>
+
+    <div class="form-container">
+      <select id="subjectSelect">
+        <option value="">Select subject</option>
+        <option value="DSA">DSA / Algorithms</option>
+        <option value="DBMS">DBMS / SQL</option>
+        <option value="Maths">Mathematics</option>
+        <option value="OS">Operating Systems</option>
+        <option value="CN">Computer Networks</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <textarea id="messageInput" placeholder="Type your doubt / question here..." rows="4"></textarea>
+      <button id="postBtn">Post Anonymously</button>
+    </div>
+
+    <div id="messagesList" class="messages"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
