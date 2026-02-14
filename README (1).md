@@ -2,27 +2,27 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# [Silent Struggle] 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: [ZENTRIX]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: [NESNIN NAJEEB P] - [SCMS KARUKUTTY]
+- Member 2: [NAIMA NAZRIN] - [SCMS KARUKUTTY]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+[https://silent-struggle.onrender.com]
 
 ### Project Description
-[2-3 lines about what your project does]
+[Silent Struggle is a web platform for students to ask doubts anonymously and get answers from peers or mentors in real-time.]
 
 ### The Problem statement
-[What problem are you solving?]
+[Many students feel shy or afraid to ask questions in class, leaving doubts unresolved.]
 
 ### The Solution
-[How are you solving it?]
+[A web-based platform where students can post doubts, receive replies, and upvote helpful answers without fear, ensuring learning continues seamlessly.]
 
 ---
 
@@ -31,25 +31,25 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: [ JavaScript, HTML,CSS]
+- Frameworks used: [Express.js]
+- Libraries used: [Node.js,Express,File System,Path]
+- Tools used: [Git,GitHub,Render,VS Code]
 
 **For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+- Main components: [laptop,processor,RAM,Storage,internet]
+- Specifications: [intel i5,windows,ram 8gb,SSD256gb]
+- Tools required: [Node.js,npm,VS Code,Git,GitHub,Render,Chrome]
 
 ---
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [Ask Doubts - Users can post their doubts/questions]
+- Feature 2: [Reply & Upvote - Users can reply to doubts and upvote helpful replies.]
+- Feature 3: [Doubt Tracking - All doubts and replies are saved in a JSON file for persistence.]
+- Feature 4: [Real-Time Interaction - Responses update dynamically without refreshing the page]
 
 ---
 
@@ -59,12 +59,22 @@ List the key features of your project:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+[]# 1. Clone the repository
+git clone https://github.com/<your-username>/Silent-Struggle.git
+cd Silent-Struggle
+
+# 2. Install Node.js dependencies
+npm install
 ```
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
+[# 3. Start the server
+node server.js
+
+# 4. Open the project in browser
+# URL:
+https://silent-struggle.onrender.com
 ```
 
 ### For Hardware:
@@ -83,26 +93,33 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![alt text](image.png)
 
 #### Diagrams
 
 **System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+![alt text](image-1.png)
+3 layers frontend,server,dat
+Frontend: HTML/CSS/JS - handles UI and sends requests
+
+Server: Node.js + Express - handles APIs and processes data
+
+Data Layer: doubts. j son - stores doubts and replies
+
 
 **Application Workflow:**
 
 ![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+1. User submits a doubt → frontend sends POST request.
+
+2. Backend saves it in doubts. json.
+
+3. Other users fetch doubts → GET request → frontend updates.
+
+4. Users reply/upvote → POST request → backend updates.
+
+5. Ul updates dynamically to show latest doubts, replies, and upvotes.
 
 ---
 
@@ -134,40 +151,80 @@ List the key features of your project:
 ## Additional Documentation
 
 ### For Web Projects with Backend:
+Backend Language & Framework: Node.js + Express.js
 
+Purpose: Handles all requests from the frontend, processes data, and manages storage.
+
+Storage: doubts. json acts like a lightweight database storing:
+
+All doubts/questions
+
+All replies to each doubt
+
+Upvotes for each reply
 #### API Documentation
 
-**Base URL:** `https://api.yourproject.com`
+**Base URL:** https://silent-struggle.onrender.com
 
 ##### Endpoints
 
 **GET /api/endpoint**
-- **Description:** [What it does]
+- **Description:** [Description: Fetch all doubts along with replies and upvotes.
+
+Request: No parameters]
 - **Parameters:**
   - `param1` (string): [Description]
   - `param2` (integer): [Description]
 - **Response:**
 ```json
-{
-  "status": "success",
-  "data": {}
-}
+[
+  {
+    "id": 1771021152613,
+    "text": "Value of pi?",
+    "subject": "Maths",
+    "timestamp": "2026-02-13T22:19:12.613Z",
+    "replies": [
+      {
+        "text": "3.14",
+        "timestamp": "2026-02-13T22:19:59.394Z",
+        "upvotes": 1
+      }
+    ]
+  },
+  {
+    "id": 1771019465797,
+    "text": "Role of OS?",
+    "subject": "CS",
+    "timestamp": "2026-02-13T21:51:05.797Z",
+    "replies": [
+      {
+        "text": "Acts as an interface between user and hardware",
+        "timestamp": "2026-02-13T21:51:32.175Z",
+        "upvotes": 2
+      }
+    ]
+  }
+]
 ```
 
 **POST /api/endpoint**
-- **Description:** [What it does]
+- **Description:** [submit a new doubt or qn]
 - **Request Body:**
 ```json
 {
-  "field1": "value1",
-  "field2": "value2"
+  "text": "What is a pointer?",
+  "subject": "CS"
 }
+
 ```
 - **Response:**
 ```json
 {
-  "status": "success",
-  "message": "Operation completed"
+  "id": 1771022000000,
+  "text": "What is a pointer?",
+  "subject": "CS",
+  "timestamp": "2026-02-14T02:00:00.000Z",
+  "replies": []
 }
 ```
 
